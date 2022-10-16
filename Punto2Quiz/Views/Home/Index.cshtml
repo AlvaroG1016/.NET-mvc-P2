@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Segundo Punto";
+}
+
+<div class="text-center">
+    <div id="Pruebita">
+        <h1 class="display-4" id="Title">CALCULAR VENTAS</h1>
+
+        <form action="/Ventas/Resultados" method="post">
+            <fieldset>
+                <label id="Ubi">Seleccione su ubicación </label>
+                <select required id="Ubicacion" name="Ubicacion">
+                    <option selected="selected" disabled value="">Elija una opción</option>
+                    <option value="Norte">Norte</option>
+                    <option value="Centro">Centro</option>
+                    <option value="Sur">Sur</option>
+                    <option value="Occidente">Occidente</option>
+                    <option value="Oriente">Oriente</option>
+
+                </select>
+                <br />
+                <div id="olas">
+                    <label id="label">Digite de cuánto fueron sus ventas </label>
+
+                    <input required type="number" name="ventas" />
+
+                </div>
+                <br />
+                <div >
+                    <input type="submit" value="Enviar" id="boton" />
+
+                </div>
+            </fieldset>
+
+
+        </form>
+    </div>
+
+</div>

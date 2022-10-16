@@ -1,0 +1,11 @@
+﻿@model Punto2Quiz.Models.Persona
+@{
+    ViewData["Title"] = "Resultados";
+}
+
+<h1>Resultados</h1>
+<p> Sus ventas son: @Model.ventas </p> @* /* Esto es razor, para poder mostrar el valor que tomamos del campo de texto*/
+*@
+<p> Sus ubicacion son: @Model.ubi </p>
+@Model.Total
+@Model.Mensaje
