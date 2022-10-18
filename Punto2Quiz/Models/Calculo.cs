@@ -27,7 +27,7 @@
                 ola.Mensaje = "No cumplío la meta";
                 ola.Total = ola.ventas;
             }
-
+                
             if (ola.ubi == "Centro" && ola.ventas >= 120000 && ola.ventas<= 144000)
             {
                 ola.Total = ola.ventas + (ola.ventas * 0.5); //Si entra, se le aplica su bonificación
