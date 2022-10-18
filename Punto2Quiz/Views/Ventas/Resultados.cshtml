@@ -2,10 +2,18 @@
 @{
     ViewData["Title"] = "Resultados";
 }
+<div id="Res"> 
+    <h1 id="titRes">Resultados</h1>
+    <p id="txt"> Sus ventas son: @Model.ventas 
+        <br />
+        Sus ubicacion es: @Model.ubi
+    </p> @* /* Esto es razor, para poder mostrar el valor que tomamos del campo de texto*/
+    *@
+    <h2 id="subTi">@Model.Mensaje</h2>
+    <br /> 
+    <p id="Bon"> @Model.Bonif
+    <br />
+        Su total es: @Model.Total
+    </p>
+</div>
 
-<h1>Resultados</h1>
-<p> Sus ventas son: @Model.ventas </p> @* /* Esto es razor, para poder mostrar el valor que tomamos del campo de texto*/
-*@
-<p> Sus ubicacion son: @Model.ubi </p>
-@Model.Total
-@Model.Mensaje
