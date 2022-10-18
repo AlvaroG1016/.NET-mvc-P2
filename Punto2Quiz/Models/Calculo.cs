@@ -4,15 +4,19 @@
     public class Calculo
     {
 
-        public double metNorte = 80000;
+         public const double metNorte = 80000;
+         public const double porcNorte = 96000;
+
+
+
         public object Data(Persona ola) //Método que realiza el calculo si llegó al tope o no, recibiendo un objeto del tipo persona
         {
-            if (ola.ubi == "Norte" && ola.ventas >= metNorte && ola.ventas <= (metNorte * 0.5) + metNorte) //hago los porcentajes y la validación
+            if (ola.ubi == "Norte" && ola.ventas >= metNorte && ola.ventas <= porcNorte) //hago los porcentajes y la validación
             {
                 ola.Total = ola.ventas + (ola.ventas * 0.5); //Si entra, se le aplica su bonificación del 0.5
                 ola.Bonif = "Obtuvo una bonificación del 0.5%, superó la meta del 100% (80.000)";
 
-            } else if (ola.ventas > (metNorte * 0.5) + metNorte && ola.ubi=="Norte") //If anidado no funcionó, tuve que poner else if para hacer la validacion de más del 120%
+            } else if (ola.ventas > porcNorte && ola.ubi=="Norte") //If anidado no funcionó, tuve que poner else if para hacer la validacion de más del 120%
             {
                 ola.Total = ola.ventas + (ola.ventas * 0.10);
                 ola.Bonif = "Obtuvo una bonificación del 0.10%, superó la meta del 120% (96.000)";
